@@ -5,4 +5,5 @@
 the virtual environment: `virtualenv you_virtual_environemnt_name`
 ### activate it and head to the project folder `mysite`
 ### install the requirements: `pip install -r requirements.txt`
+### run `python manage.py migrate` to create the database tables
 ### run the surever
