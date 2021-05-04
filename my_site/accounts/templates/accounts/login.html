@@ -1,0 +1,22 @@
+{% extends 'accounts/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+Account|Login
+{% endblock title %}
+
+{% block content %}
+<h1>Account Login</h1>
+<form class="form-control" method="post">
+	{% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">Username</label>
+    <input type="text" name="username" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+  <button type="submit" class="btn btn-success">Sign in</button>
+</form>
+<a href="{% url 'password_reset' %}">forget password ?</a>
+{% endblock content %}

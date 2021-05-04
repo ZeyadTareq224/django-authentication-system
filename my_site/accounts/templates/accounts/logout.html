@@ -1,0 +1,14 @@
+{% extends 'registration/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+Account|Sign Out
+{% endblock title %}
+
+{% block content %}
+<h1>Account Sign Out</h1>
+<form class="form-control" method="post">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <button class="btn btn-success mt-2" type="submit">Sign Out</button>
+</form>
+{% endblock content %}
